@@ -22,9 +22,9 @@ spec:
           limits:
             cpu: 200m
             memory: 200Mi
-          requests:
-            cpu: 99m
-            memory: 100Mi
+          # requests:
+          #   cpu: 99m
+          #   memory: 100Mi
         ports:
         - containerPort: 80
         securityContext:
