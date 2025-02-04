@@ -4,6 +4,17 @@ kind: Kustomization
 namespace: demo-sockshop
 
 resources:
-- user.yaml
-- user-db.yaml
+- carts-db.yaml
+- carts.yaml
+- catalog-db.yaml
+- catalog.yaml
+- frontend.yaml
+- orders-db.yaml
+- orders.yaml
+- payment.yaml
+- queue.yaml
+- rabbitmq.yaml
+- session.yaml
 - shipping.yaml
+- user-db.yaml
+- user.yaml
