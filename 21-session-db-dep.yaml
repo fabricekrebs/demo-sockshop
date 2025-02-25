@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: session-db
+    name: session-db
+    version: v0.1.0
+  name: session-db
+  namespace: sock-shop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: session-db
+      name: session-db
+      version: v0.1.0
+  template:
+    metadata:
+      annotations:
+        prometheus.io.scrape: 'false'
+      labels:
+        app: session-db
+        name: session-db
+        version: v0.1.0
+    spec:
+      containers:
+      - image: redis:alpine
+        name: session-db
+        ports:
+        - containerPort: 6379
+          name: redis
+        securityContext:
+          capabilities:
+            add:
+            - CHOWN
+            - SETGID
+            - SETUID
+            drop:
+            - all
+          readOnlyRootFilesystem: true
+      nodeSelector:
+        kubernetes.io/os: linux

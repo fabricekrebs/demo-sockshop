@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: queue-master
+    name: queue-master
+    version: v0.1.0
+  name: queue-master
+  namespace: sock-shop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: queue-master
+      name: queue-master
+      version: v0.1.0
+  template:
+    metadata:
+      labels:
+        app: queue-master
+        name: queue-master
+        version: v0.1.0
+    spec:
+      containers:
+      - env:
+        - name: JAVA_OPTS
+          value: -Xms64m -Xmx128m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom
+            -Dspring.zipkin.enabled=false
+        image: weaveworksdemos/queue-master:0.3.1
+        name: queue-master
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 150m
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 10Mi
+      nodeSelector:
+        kubernetes.io/os: linux
