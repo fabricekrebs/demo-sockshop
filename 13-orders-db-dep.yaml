@@ -27,9 +27,6 @@ spec:
         - containerPort: 27017
           name: mongo
         resources:
-          limits:
-            cpu: 450m
-            memory: 100Mi
           requests:
             cpu: 50m
             memory: 50Mi
