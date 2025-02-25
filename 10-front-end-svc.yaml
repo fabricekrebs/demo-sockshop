@@ -17,4 +17,4 @@ spec:
     app: front-end
     name: front-end
     version: v0.1.0
-  type: LoadBalancer
+  type: NodePort
