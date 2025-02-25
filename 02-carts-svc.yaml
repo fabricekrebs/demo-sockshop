@@ -8,7 +8,6 @@ metadata:
     name: carts
     version: v0.1.0
   name: carts
-  namespace: sock-shop
 spec:
   ports:
   - port: 80

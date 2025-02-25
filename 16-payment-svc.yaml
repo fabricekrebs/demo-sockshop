@@ -8,7 +8,6 @@ metadata:
     name: payment
     version: v0.1.0
   name: payment
-  namespace: sock-shop
 spec:
   ports:
   - port: 80

@@ -9,7 +9,6 @@ metadata:
     name: rabbitmq
     version: v0.1.0
   name: rabbitmq
-  namespace: sock-shop
 spec:
   ports:
   - name: rabbitmq

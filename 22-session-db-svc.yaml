@@ -6,7 +6,6 @@ metadata:
     name: session-db
     version: v0.1.0
   name: session-db
-  namespace: sock-shop
 spec:
   ports:
   - port: 6379

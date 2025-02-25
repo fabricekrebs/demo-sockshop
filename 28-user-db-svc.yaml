@@ -6,7 +6,6 @@ metadata:
     name: user-db
     version: v0.1.0
   name: user-db
-  namespace: sock-shop
 spec:
   ports:
   - port: 27017
