@@ -21,9 +21,13 @@ resources:
   - 16-payment-svc.yaml
   - 17-queue-master-dep.yaml
   - 18-queue-master-svc.yaml
-  - 19-shipping-dep.yaml
-  - 20-shipping-svc.yaml
-  - 21-user-dep.yaml
-  - 22-user-svc.yaml
-  - 23-user-db-dep.yaml
-  - 24-user-db-svc.yaml
+  - 19-rabbitmq-dep.yaml
+  - 20-rabbitmq-svc.yaml
+  - 21-session-db-dep.yaml
+  - 22-session-db-svc.yaml
+  - 23-shipping-dep.yaml
+  - 24-shipping-svc.yaml
+  - 25-user-dep.yaml
+  - 26-user-svc.yaml
+  - 27-user-db-dep.yaml
+  - 28-user-db-svc.yaml
